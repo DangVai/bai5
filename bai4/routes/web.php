@@ -14,12 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\DataController;
 
 Route::get('/', function () {
     return view('home');
 });
-
+//tên đương dẫn,     tên controller,        tên function
 Route::get('index', [PageController::class, 'getIndex'])->name('trang-chu');
+Route::get('/data', [DataController::class, 'getIndex'])->name('data');
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;

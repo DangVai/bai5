@@ -7,6 +7,12 @@ use Illuminate\Database\Schema\Blueprint;
 
 class DataController extends Controller
 {
+    public function getIndex()
+    {
+        $this->createAllTables();
+        return "Tables created successfully!";
+    }
+
     public function createAllTables()
     {
         Schema::create('addresses', function (Blueprint $table) {
